@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventory</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="app.js"></script>
+
+</head>
+<body>
+    <header>
+        <img src="Inventory/img/totalenergies.webp" alt="Logo" style="width: 100px; height: auto;">
+        <h1>IN HOUSE IST SHARED OPERATION</h1>
+    
+    </header>
+    <div id="root"></div>
+    <script src="https://unpkg.com/react/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone/babel.min.js"></script>
+    <script type="text/babel" src="app.js"></script>
+
+    <p class="center-text" style="font-size: 24px;">Intervener Inventory form.</p>
+    <div class="mb-3">
+    <div class="col-6 input-group">
+        <input type="text" id="surname" name="surname" placeholder="Surname">
+        <input type="text" id="Firstname" name="Firstname" placeholder="Firstname">
+    </div>
+    <div class="col-6 input-group">
+        <input type="text" id="IGG" name="IGG" placeholder="IGG">
+        <input type="text" id="location" name="location" placeholder="Location">
+    </div>
+    <div class="col-6 input-group">
+        <input type="text" id="roomNumber" name="roomNumber" placeholder="Room Number">
+        <input type="text" id="department" name="department" placeholder="Department">
+    </div>
+    <div class="col-6 input-group">
+        <textarea id="assets" name="assets" placeholder="List your assets here" rows="4" cols="50"></textarea>
+    </div>
+</div>
+        <div class="col-6">
+            <input type="button" value="Print" onclick="window.print()">
+            <input type="button" value="Send Email" onclick="sendEmail()">
+
+        </div>
+        </div>
+        
+    </form>
+
+    <script>
+    function sendEmail() {
+      const recipient = 'example@totalenergies.com';
+      const subject = 'Subject of the email';
+      const text = 'Body of the email';
+  
+      const emailApiUrl = 'http://localhost:3000/send-email'; // Replace with your configuration variable
+      fetch(emailApiUrl, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          recipient: recipient,
+          subject: subject,
+          text: text
+        })
+      })
+      .then(response => response.text())
+      .then(result => alert(result))
+      .catch(error => console.error('Error:', error));
+    }
+  </script>
+</body>
+</html>

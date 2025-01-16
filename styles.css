@@ -1,0 +1,90 @@
+body {
+    background-color: #f0f0f0; /* Light grey background color */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center; /* Center text in the body */
+}
+
+header {
+    background: linear-gradient(to right, rgb(221, 14, 66), rgb(81, 142, 211), rgb(148, 226, 103)); /* Gradient with three colors */
+    padding: 10px 0;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+header h1 {
+    margin: 0;
+    padding: 10px 0;
+}
+
+.center-text {
+    text-align: center;
+    margin-bottom: 20px; /* Add space below the paragraph */
+}
+
+.col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+}
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+/*.row input[type="text"] {
+    width: 600px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    */
+.logo {
+        width: 100px;
+        height: auto;
+        margin-right: 20px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+
+.input-group {
+    margin-bottom: 15px; /* Adjust the value as needed */
+}
+.input-group input, .input-group textarea {
+    width:20%; /* Make inputs take full width of their container */
+    padding: 15px; /* Add padding inside the inputs */
+    box-sizing: border-box; /* Ensure padding doesn't affect the width */
+}
+
+.row input[type="button"] {
+    margin-left: 10%;
+    margin-bottom: 30%;
+    padding: 10px 20px; /* Add padding to the button */
+    background-color: #007bff; /* Change the background color */
+    color: white; /* Change the text color */
+    border: none; /* Remove the border */
+    border-radius: 5px; /* Add rounded corners */
+    cursor: pointer; /* Change the cursor to pointer */
+    font-size: 16px; /* Increase the font size */
+    transition: background-color 0.3s ease; /* Add transition for background color */
+}
+.row input[type="button"]:hover {
+    background-color: #0056b3; /* Change the background color on hover */
+}
