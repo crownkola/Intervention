@@ -1,0 +1,6 @@
+!tsconfig.json
+eslint.config.mjs
+.vscodeignore
+first project
+first project.pub
+nodefs-provider-sample/extension.ts
